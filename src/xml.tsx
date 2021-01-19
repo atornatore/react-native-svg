@@ -212,7 +212,7 @@ export function getStyle(string: string): Styles {
     if (declaration.length !== 0) {
       const split = declaration.split(':');
       const property = split[0];
-      const value = split[1];
+      const value = split.length>0?split[1]:"";
       style[camelCase(property.trim())] = value.trim();
     }
   }
